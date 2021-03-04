@@ -114,7 +114,7 @@ module Fastlane
       def self.get_details_and_download_dsym(app: nil, train: nil, build_number: nil, uploaded_date: nil, platform: nil, wait_for_dsym_processing: nil, wait_timeout: nil, output_directory: nil)
         start = Time.now
         download_url = nil
-
+        UI.verbose("----> Marcos <-----")
         loop do
           begin
             resp = Spaceship::Tunes.client.build_details(app_id: app.id, train: train, build_number: build_number, platform: platform)
